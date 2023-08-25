@@ -13,7 +13,18 @@ const Tablar = (konu) => {
   //   <div class="tab">teknoloji</div>
   // </div>
   //
-}
+
+  const tabDiv = document.createElement("div");
+  tabDiv.setAttribute("topics");
+
+  konu.forEach((item) => {
+    const div = document.createElement("div");
+    div.textContent = item;
+    div.append(tabDiv);
+  });
+  return tabDiv;
+};
+const tabsCont = document.querySelector(".tabs-container");
 
 const tabEkleyici = (secici) => {
   // GÖREV 4
@@ -23,6 +34,6 @@ const tabEkleyici = (secici) => {
   // Yanıtın içindeki konu dizisini bulun ve Tablar bileşenini kullanarak tabları oluşturun.
   // Tabları, fonksiyona iletilen seçiciyle eşleşen DOM'daki öğeye ekleyin.
   //
-}
+};
 
-export { Tablar, tabEkleyici }
+export { Tablar, tabEkleyici };
